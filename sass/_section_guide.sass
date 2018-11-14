@@ -1,0 +1,128 @@
+.guide
+  position: relative
+  padding-bottom: 28px
+
+
+  &__inner-row
+    padding-top: 40px
+    @include row(row,space-between,flex-start)
+
+  &__headline
+    @include roboto(400,48)
+    color: #333333
+
+
+  &__expert-box
+    width: 26.7%
+
+
+  &__box
+    padding-bottom: 26px
+    border-bottom: 2px solid #333131
+
+  &__name
+    @include roboto(400,28)
+    color: #333333
+    padding: 32px 0 19px
+
+
+
+  &__position
+    @include roboto(400,18)
+    color: #333333
+
+
+  &__about
+    @include roboto(300,18)
+    color: #666666
+    line-height: 1.74vw
+    +media(1440)
+      line-height: 25px
+
+
+  &__box-about
+    padding: 24px 0 0 0
+
+
+  &__arrow-box
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15)
+    width: 2.22vw
+    line-height: 2.22vw
+    border-radius: 50px
+    text-align: center
+    transition: 0.5s
+    transform: rotate(180deg)
+
+
+  &__arrow
+    display: inline-block
+    width: 18px
+    height: 9px
+    background: url('../images/sprite/sprites.png') -286px -46px
+
+
+  &__inner-title
+    @include row(row)
+
+
+  &__title
+    @include roboto(400,28)
+    color: #333333
+    padding-bottom: 16px
+
+
+  &__list-box
+    width: 68.5%
+
+
+  &__content
+    @include roboto(300,18)
+    line-height: 1.74vw
+    color: #333333
+    padding-bottom: 16px
+    +media(1440)
+      line-height: 25px
+
+
+  &__btn
+    @include roboto(300,18)
+    text-decoration: underline
+    color: #666666
+    &:hover
+      text-decoration: none
+
+
+  &__content-box
+    overflow: hidden
+    height: 0
+
+  &__container
+    padding-bottom: 44px
+
+
+.first_list.is-active,
+.second_list.is-active,
+.third_list.is-active,
+.fourth_list.is-active
+    height: 100%
+
+
+.first_arrow.rotate,
+.second_arrow.rotate,
+.third_arrow.rotate,
+.fourth_arrow.rotate
+  transform: rotate(0deg)
+
+
+#first.is-active,
+#second.is-active,
+#third.is-active,
+#fourth.is-active
+  display: none
+
+
+
+
+
+
+

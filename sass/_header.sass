@@ -1,0 +1,44 @@
+.header
+  background: url("../images/pic/background/header.jpg") center no-repeat
+  background-size: cover
+  padding-bottom: 118px
+
+
+  &__inner
+    background: rgba(0, 0, 0, 0.5)
+    padding: 20px 0
+
+
+  &__nav
+    @include row(row)
+    max-width: 71%
+
+
+  &__link
+    @include roboto(400,16)
+    position: relative
+    &:hover
+      &:after
+        content: ''
+        position: absolute
+        width: 100%
+        background: #fff
+        height: 2px
+        bottom: -3px
+        left: 0
+
+
+  &__container
+    padding-top: 43px
+
+
+  &__title
+    @include roboto(400,48)
+    padding-bottom: 24px
+
+
+  &__content
+    @include roboto(300,18)
+    line-height: 1.74vw
+    +media(1440)
+      line-height: 25px

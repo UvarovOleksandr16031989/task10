@@ -1,0 +1,150 @@
+.users
+  position: relative
+  padding: 10px 0 0 0
+
+
+  &__headline
+    @include roboto(500,48)
+    color: #333
+
+
+  &__inner-row
+    @include row(row)
+    flex-wrap: wrap
+    padding-top: 25px
+
+
+  &__article
+    background: #fff
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15)
+    border-radius: 6px
+    overflow: hidden
+    width: 48.9%
+    padding-bottom: 2.22vw
+    margin-bottom: 24px
+    +media(1440)
+      padding-bottom: 32px
+
+
+  &__inner-head
+    background: #f7f7f7
+    @include row(row)
+    padding: 20px 24px
+
+
+  &__logo
+    display: inline-block
+
+
+  &__logo--vh
+    @extend .cards__logo--vh
+
+
+  &__logo--ac
+    @extend .cards__logo--ac
+
+
+  &__logo--rt
+    @extend .cards__logo--rt
+
+
+  &__logo--ls
+    @extend .cards__logo--ls
+
+
+  &__star
+    @extend .cards__star
+
+
+  &__star--7
+    width: 8px
+
+
+  &__star--8
+    width: 8.5px
+
+
+  &__star--2
+    width: 3px
+
+
+  &__star--5
+    width: 5.5px
+
+
+  &__assessment
+    @include roboto(500,24)
+    color: #333131
+
+
+  &__box-stars
+    padding-right: 12px
+
+
+  &__inner
+    @include row(row)
+
+
+  &__container
+    padding: 4.52% 24px 0
+    @include row(row,space-between,flex-end)
+    +media(1440)
+      padding-top: 26px
+
+
+  &__inner-content
+    width:  66.2%
+
+
+  &__title
+    @include roboto(400,22)
+    color: #333
+    padding-bottom: 2.96%
+    +media(1440)
+      padding-bottom: 17px
+
+
+  &__content
+    @include roboto(300,18)
+    color: #333333
+    line-height: 1.74vw
+    min-height: 10.28vw
+    transform: translateY(-5px)
+    +media(1440)
+      line-height: 25px
+
+
+  &__figure
+    border-radius: 6px
+    min-width: 150px
+
+
+  &__inner-btn
+    padding: 0 24px
+
+
+  &__link
+    @extend .cards__btn
+    margin: 0
+
+
+  &__btn
+    border: 1px solid #87172E
+    border-radius: 3px
+    line-height: 2.78vw
+    min-width: 183px
+    margin-left: 16px
+    @include roboto(500,14)
+    color: #87172E
+    &:hover
+      color: #fff
+      background: #87172E
+    +media(1440)
+      line-height: 40px
+
+
+  &__inner-btn
+    @include row(row)
+    padding-top: 8.35%
+    +media(1440)
+      padding-top: 48px

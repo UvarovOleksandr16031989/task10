@@ -1,0 +1,186 @@
+.table
+  position: relative
+  top: -97px
+
+
+  &__container
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15)
+    border-radius: 6px
+    overflow: hidden
+    background: #ffffff
+
+
+  &__head
+    background: #F7F7F7
+    @include line-height(48)
+    @include row(row,space-around)
+
+  &__headline
+    padding-left: 32px
+    @include roboto(300,18)
+    color: #000
+    &--link
+      color: #549DF3
+      &:hover
+        text-decoration: underline
+        cursor: pointer
+
+
+  &__logo
+    display: inline-block
+    margin-left: 24px
+    &--vh
+      @extend .users__logo--vh
+    &--ac
+      @extend .users__logo--ac
+    &--ls
+      @extend .users__logo--ls
+    &--rt
+      @extend .users__logo--rt
+    &--m
+      width: 140px
+      height: 16px
+      background: url('../images/sprite/sprites.png') -170px -10px
+
+
+
+
+
+  &__td
+    @include row(row,space-around,flex-start)
+
+
+
+  &__tr
+    padding-left: 32px
+    box-sizing: border-box
+    border-bottom: 1px solid #E3E3E3
+    border-right: 1px solid #E3E3E3
+    height: 16.11vw
+    min-height: 232px
+    padding-top: 37px
+
+
+
+  &__tr--row
+    @include row(row,flex-start)
+
+
+  &__number
+    @include roboto(500,24)
+    color: #981E37
+    text-transform: uppercase
+    width: 48px
+    line-height: 48px
+    vertical-align: middle
+    background: #DEC0C6
+    display: inline-block
+    text-align: center
+    border-radius: 30px
+
+
+  &__title
+    @include roboto(400,22)
+    color: #000
+    padding: 7px 0 1.11vw 0
+    +media(1440)
+      padding: 16px 0
+
+
+
+  &__content
+    @include roboto(300,14)
+    @include line-height(26)
+    padding-bottom: 1.88vw
+    color: #000000
+    +media(1440)
+      padding-bottom: 27px
+
+
+  &__static
+    @include roboto(400,14)
+    color: #000
+
+
+  &__percent
+    color: #059572
+
+
+  &__assessment
+    @include roboto(500,48)
+    color: #000
+
+  &__tr--rank
+    width: 23.49%
+
+
+  &__tr--overview
+    width: 56.77%
+    &-head
+      width: 31.43%
+
+
+  &__tr--our
+    width: 43.08%
+    padding: 37px 0  32px 0
+    @include row(column,flex-start)
+    &-head
+      width: 23.85%
+
+
+  &__tr--advertiser
+    width: 20.95%
+    border-right: none
+
+
+  &__inner
+    width: 55.28%
+    @include row(row,space-around)
+
+  &__star
+    @extend .users__star
+
+  &__votes
+    @include roboto(400,14)
+    color: #000
+    padding-bottom: 1.67vw
+    +media(1440)
+      padding-bottom: 24px
+    &--blue
+      color: #549DF3
+      text-decoration: underline
+
+
+  &__link-credits
+    display: inline-block
+    @include roboto(400,14)
+    color: #059572
+    text-align: center
+    border: 1px solid #059572
+    border-radius: 3px
+    min-width: 144px
+    width: 10.00vw
+    @include line-height(32)
+    &:hover
+      color: #ffffff
+      background: #059572
+
+
+  &__star-box
+    padding: 1.11vw 0
+    +media(1440)
+      padding: 16px 0
+
+
+  &__link
+    @extend .users__link
+    width: 12.64vw
+    &--white
+      @extend .users__btn
+      margin:  16px 0 0 0
+
+  &__box-btn
+    @include row(column,center, flex-start)
+    padding-top: 2.64vw
+    +media(1440)
+      padding-top: 38px

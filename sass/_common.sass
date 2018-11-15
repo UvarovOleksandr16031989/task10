@@ -9,7 +9,7 @@
   font-size: ($size/1440*100)+ vw
   font-weight: $weight
   font-family: 'Roboto', sans-serif
-  +media(1176)
+  +media(1440)
     font-size: $size+px
 
 @mixin row ($direction: row, $content: space-between, $items: center)
@@ -17,6 +17,11 @@
   flex-direction: $direction
   justify-content: $content
   align-items: $items
+
+@mixin line-height($height)
+  line-height: ($height/1440*100)+ vw
+  +media(1440)
+    line-height: $height +px
 
 
 

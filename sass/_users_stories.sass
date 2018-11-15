@@ -37,23 +37,35 @@
 
 
   &__logo--vh
-    @extend .cards__logo--vh
+    width: 140px
+    height: 22px
+    background: url('../images/sprite/sprites.png') -10px -52px
 
 
   &__logo--ac
-    @extend .cards__logo--ac
+    width: 140px
+    height: 22px
+    background: url('../images/sprite/sprites.png') -10px -10px
 
 
   &__logo--rt
-    @extend .cards__logo--rt
+    width: 111px
+    height: 29px
+    background: url('../images/sprite/sprites.png') -10px -94px
 
 
   &__logo--ls
-    @extend .cards__logo--ls
+    width: 84px
+    height: 29px
+    background: url('../images/sprite/sprites.png') -170px -94px
+    transform: translateX(-10px)
 
 
   &__star
-    @extend .cards__star
+    width: 11px
+    height: 10px
+    background: url('../images/sprite/sprites.png') -274px -94px
+    display: inline-block
 
 
   &__star--7
@@ -124,8 +136,24 @@
 
 
   &__link
-    @extend .cards__btn
+    background: #87172E
+    border-radius: 3px
+    line-height: 2.78vw
+    text-align: center
+    vertical-align: middle
+    @include roboto(500,14)
+    display: block
+    min-width: 183px
+    border: 1px solid transparent
     margin: 0
+    &:hover
+      color: #87172E
+      background: #fff
+      border: 1px solid #87172E
+    +media(1440)
+      line-height: 40px
+
+
 
 
   &__btn
@@ -136,6 +164,10 @@
     margin-left: 16px
     @include roboto(500,14)
     color: #87172E
+    text-align: center
+    display: block
+    vertical-align: middle
+    background: #fff
     &:hover
       color: #fff
       background: #87172E

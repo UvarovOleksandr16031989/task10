@@ -2,6 +2,10 @@
   background: url("../images/pic/background/header.jpg") center no-repeat
   background-size: cover
   padding-bottom: 118px
+  +media(768)
+    background: url("../images/pic/background/header_tablet.jpg") center no-repeat
+  +media(375)
+    background: url("../images/pic/background/header_mobail.jpg") center no-repeat
 
 
   &__inner
@@ -39,6 +43,4 @@
 
   &__content
     @include roboto(300,18)
-    line-height: 1.74vw
-    +media(1440)
-      line-height: 25px
+    @include line-height(25)

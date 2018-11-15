@@ -1,0 +1,81 @@
+.footer
+  background: url("../images/pic/background/footer.jpg") center no-repeat
+  background-size: cover
+  padding: 6.94% 0 0 0
+  +media(768)
+    background: url("../images/pic/background/footer_tablet.jpg")
+  +media(374)
+    background: url("../images/pic/background/footer_mobail.jpg")
+
+
+  &__headline
+    @include roboto(400,48)
+    padding-bottom: 2.22vw
+    +media(1440)
+      padding-bottom: 32px
+
+
+  &__content
+    @include roboto(300,24)
+    @include line-height(34)
+
+
+
+  &__inner
+    width: 34.1%
+
+
+  &__mail
+    width: 100%
+    background: #fff
+    border-radius: 3px
+    text-align: center
+    min-height: 56px
+    height: 3.89vw
+    @include roboto(300,18)
+    color: #666666
+
+
+  &__btn
+    width: 100%
+    min-height: 56px
+    height: 3.89vw
+    text-align: center
+    background: #87172E
+    border-radius: 3px
+    @include roboto(400,18)
+    margin-top: 24px
+    border: 1px solid transparent
+    &:hover
+      color: #87172E
+      background: #fff
+      border: 1px solid #87172E
+
+
+
+
+  &__form
+    padding: 2.22vw 0 7.71vw 0
+    +media(1440)
+      padding: 32px 0 111px 0
+
+
+  &__footer
+    background: rgba(0, 0, 0, 0.5)
+    line-height: 3.75vw
+    min-height: 54px
+
+
+  &__reserved
+    @include roboto(400,14 )
+
+
+  &__nav
+    @include row(row)
+
+
+  &__link
+    @include roboto(400,16)
+    text-transform: capitalize
+    &:hover
+      text-decoration: underline

@@ -1,17 +1,24 @@
 .users
   position: relative
-  padding: 10px 0 0 0
+
 
 
   &__headline
-    @include roboto(500,48)
+    @include roboto(400,48)
     color: #333
+    +media(1023)
+      text-align: center
+    +media(550)
+      font-size: 24px
 
 
   &__inner-row
-    @include row(row)
+    display: flex
+    justify-content: space-between
     flex-wrap: wrap
     padding-top: 25px
+
+
 
 
   &__article
@@ -20,10 +27,17 @@
     border-radius: 6px
     overflow: hidden
     width: 48.9%
-    padding-bottom: 2.22vw
+    padding-bottom: 32px
     margin-bottom: 24px
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    /* align-items: stretch; */
     +media(1440)
       padding-bottom: 32px
+    +media(640)
+      width: 288px
+      margin: 0 auto 24px
 
 
   &__inner-head
@@ -37,51 +51,62 @@
 
 
   &__logo--vh
+    background: url(../images/sprite/sprites.png)
     width: 140px
     height: 22px
-    background: url('../images/sprite/sprites.png') -10px -52px
+    background-size: auto
+    background-position: -10px -52px
+
 
 
   &__logo--ac
+    background: url(../images/sprite/sprites.png)
     width: 140px
     height: 22px
-    background: url('../images/sprite/sprites.png') -10px -10px
-
+    background-position: -10px -10px
+    background-size: auto
 
   &__logo--rt
+    background: url(../images/sprite/sprites.png)
     width: 111px
     height: 29px
-    background: url('../images/sprite/sprites.png') -10px -94px
-
+    background-size: auto
+    background-position: -10px -94px
 
   &__logo--ls
+    background: url(../images/sprite/sprites.png)
     width: 84px
     height: 29px
-    background: url('../images/sprite/sprites.png') -170px -94px
-    transform: translateX(-10px)
+    background-position: -170px -94px
+    background-size: auto
+
 
 
   &__star
-    width: 11px
-    height: 10px
+    width: 17px
+    height: 14px
     background: url('../images/sprite/sprites.png') -274px -94px
     display: inline-block
+    +media(1023)
+      width: 7px
+      height: 7px
+      background: url('../images/sprite/sprites.png') -141px -94px
 
 
   &__star--7
-    width: 8px
+    width: 13px
 
 
   &__star--8
-    width: 8.5px
+    width: 15px
 
 
   &__star--2
-    width: 3px
+    width: 9px
 
 
   &__star--5
-    width: 5.5px
+    width: 9px
 
 
   &__assessment
@@ -91,27 +116,40 @@
 
   &__box-stars
     padding-right: 12px
+    +media(1023)
+      padding: 0
+      margin-right: -7px
 
 
   &__inner
     @include row(row)
+    +media(1023)
+      flex-direction: column-reverse
+      align-items: flex-end
 
 
   &__container
-    padding: 4.52% 24px 0
+    padding: 24px  24px 0
     @include row(row,space-between,flex-end)
     +media(1440)
-      padding-top: 26px
+      padding-top: 31px
+    +media(1023)
+      flex-direction: column
+      align-items: flex-start
 
 
   &__inner-content
     width:  66.2%
+    +media(1023)
+      order: 2
+      width: 100%
+
 
 
   &__title
     @include roboto(400,22)
     color: #333
-    padding-bottom: 2.96%
+    padding-bottom: 9px
     +media(1440)
       padding-bottom: 17px
 
@@ -119,37 +157,38 @@
   &__content
     @include roboto(300,18)
     color: #333333
-    line-height: 1.74vw
-    min-height: 10.28vw
     transform: translateY(-5px)
-    +media(1440)
-      line-height: 25px
+    @include line-height(25)
+    +media(1023)
+      line-height: 23px
+      font-size: 16px
+
+
 
 
   &__figure
     border-radius: 6px
     min-width: 150px
-
-
-  &__inner-btn
-    padding: 0 24px
+    +media(1023)
+      padding-bottom: 16px
 
 
   &__link
     background: #87172E
     border-radius: 3px
-    line-height: 2.78vw
+    line-height: 40px
     text-align: center
     vertical-align: middle
     @include roboto(500,14)
     display: block
     min-width: 183px
-    border: 1px solid transparent
+    transition: .2s
     margin: 0
-    &:hover
-      color: #87172E
-      background: #fff
-      border: 1px solid #87172E
+    &:hover,
+    &:active,
+    &:focus
+      background: #5E0013
+
     +media(1440)
       line-height: 40px
 
@@ -159,7 +198,7 @@
   &__btn
     border: 1px solid #87172E
     border-radius: 3px
-    line-height: 2.78vw
+    line-height: 40px
     min-width: 183px
     margin-left: 16px
     @include roboto(500,14)
@@ -168,15 +207,24 @@
     display: block
     vertical-align: middle
     background: #fff
-    &:hover
+    transition:  0.2s
+    &:hover,
+    &:active,
+    &:focus
       color: #fff
       background: #87172E
     +media(1440)
       line-height: 40px
+    +media(1023)
+      margin: 16px 0 0 0
 
 
   &__inner-btn
     @include row(row)
-    padding-top: 8.35%
+    padding: 38px  24px 0
     +media(1440)
-      padding-top: 48px
+      padding-top: 39px
+    +media(1023)
+      flex-direction: column
+      padding: 16px 0 0 0
+      margin: 0 auto

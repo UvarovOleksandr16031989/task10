@@ -1,6 +1,6 @@
 .table
   position: relative
-  top: -97px
+  top: -90px
 
 
   &__container
@@ -8,12 +8,20 @@
     border-radius: 6px
     overflow: hidden
     background: #ffffff
+    +media(1024)
+      margin: 0 auto
+      box-shadow: none
+      overflow: visible
+
 
 
   &__head
     background: #F7F7F7
     @include line-height(48)
     @include row(row,space-around)
+    +media(1024)
+      display: none
+
 
   &__headline
     padding-left: 32px
@@ -29,6 +37,8 @@
   &__logo
     display: inline-block
     margin-left: 24px
+    +media(1024)
+      margin-left: 16px
     &--vh
       @extend .users__logo--vh
     &--ac
@@ -38,17 +48,24 @@
     &--rt
       @extend .users__logo--rt
     &--m
+      background: url(../images/sprite/sprites.png) -95% 4%
       width: 140px
       height: 16px
-      background: url('../images/sprite/sprites.png') -170px -10px
-
+      background-position: -170px -10px
 
 
 
 
   &__td
-    @include row(row,space-around,flex-start)
-
+    @include row(row,space-around)
+    position: relative
+    +media(1024)
+      flex-direction: column
+      margin-bottom: 24px
+      box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15)
+      border-radius: 6px
+      overflow: hidden
+      padding-bottom: 16px
 
 
   &__tr
@@ -56,9 +73,13 @@
     box-sizing: border-box
     border-bottom: 1px solid #E3E3E3
     border-right: 1px solid #E3E3E3
-    height: 16.11vw
-    min-height: 232px
-    padding-top: 37px
+    min-height: 219px
+    +media(1024)
+      border: 0
+      height: auto
+      min-height: 0px
+      box-sizing: border-box
+      padding-left: 0
 
 
 
@@ -76,25 +97,26 @@
     background: #DEC0C6
     display: inline-block
     text-align: center
-    border-radius: 30px
+    border-radius: 100px
+    +media(1024)
+      display: none
 
 
   &__title
     @include roboto(400,22)
     color: #000
-    padding: 7px 0 1.11vw 0
-    +media(1440)
-      padding: 16px 0
+    padding-bottom: 9.94px
+    +media(1024)
+      padding: 0 0 16px 0
 
 
 
   &__content
     @include roboto(300,14)
     @include line-height(26)
-    padding-bottom: 1.88vw
+    padding-bottom: 27px
     color: #000000
-    +media(1440)
-      padding-bottom: 27px
+
 
 
   &__static
@@ -109,46 +131,113 @@
   &__assessment
     @include roboto(500,48)
     color: #000
+    +media(1024)
+      font-size: 24px
+
 
   &__tr--rank
     width: 23.49%
+    +media(1023)
+      width: 100%
+      background: #F7F7F7
+      min-height: 0
+      padding: 0
+      height: 59px
 
 
   &__tr--overview
-    width: 56.77%
+    width: 56.7%
+    display: flex
+    flex-direction: column
+    justify-content: center
     &-head
       width: 31.43%
+    +media(1024)
+      width: 70.77%
+    +media(767)
+      width: 100%
+
 
 
   &__tr--our
     width: 43.08%
-    padding: 37px 0  32px 0
-    @include row(column,flex-start)
+    @include row(column,center)
+    padding: 0
     &-head
       width: 23.85%
+    +media(1024)
+      align-items: flex-end
+      width: 30.08%
+    +media(767)
+      padding: 0px
+      position: absolute
+      top: 8px
+      right: 16px
 
 
   &__tr--advertiser
     width: 20.95%
     border-right: none
+    padding-left: 0
+    @include row(column,center,normal)
+    +media(1024)
+      width: 100%
+      padding-top: 31px
 
 
   &__inner
     width: 55.28%
     @include row(row,space-around)
+    +media(1024)
+      width: 100%
+      padding: 0 16px
+      box-sizing: border-box
+      padding-top: 24px
+      align-items: flex-start
+
 
   &__star
-    @extend .users__star
+    margin: 0 4.5px
+    display: inline-block
+    width: 17px
+    height: 17px
+    background: url('../images/sprite/sprites.png') -286px -46px
+    +media(1024)
+      margin: 0
+      width: 13px
+      height: 11px
+      background: url('../images/sprite/sprites.png') -12px -183px
+    &--6
+      width: 14px
+      +media(1024)
+        width: 9px
+    &--3
+      width: 12px
+      +media(1024)
+        width: 6px
+    &--2
+      width: 11.5px
+      +media(1024)
+        width: 5.5px
+    &--0
+      width: 8.5px
+      +media(1024)
+        width: 4.5px
+
+
 
   &__votes
     @include roboto(400,14)
     color: #000
-    padding-bottom: 1.67vw
-    +media(1440)
-      padding-bottom: 24px
+    padding-bottom: 24px
     &--blue
       color: #549DF3
       text-decoration: underline
+    +media(1024)
+      padding-bottom: 14px
+      font-size: 10px
+    +media(767)
+      display: none
 
 
   &__link-credits
@@ -158,29 +247,43 @@
     text-align: center
     border: 1px solid #059572
     border-radius: 3px
-    min-width: 144px
-    width: 10.00vw
-    @include line-height(32)
-    &:hover
-      color: #ffffff
-      background: #059572
+    width: 144px
+    @include line-height(30)
+    transition: .2s
+    +media(1024)
+      width: 107px
+      font-size: 12px
+    +media(767)
+      display: none
+    &--none
+      +media(767)
+        display: block
+
+  &__inner-static
+    @include  row(row,)
+
+
 
 
   &__star-box
-    padding: 1.11vw 0
-    +media(1440)
-      padding: 16px 0
+    padding: 16px 0
+    @include row(row)
+    +media(1024)
+      padding: 8px 0
 
 
   &__link
     @extend .users__link
-    width: 12.64vw
+    width: 182px
+    margin: 0 auto
+    +media(1024)
+      width: 100%
     &--white
       @extend .users__btn
-      margin:  16px 0 0 0
+      margin:  16px auto 0
+
 
   &__box-btn
     @include row(column,center, flex-start)
-    padding-top: 2.64vw
-    +media(1440)
-      padding-top: 38px
+    +media(1024)
+      padding: 7px 16px 0

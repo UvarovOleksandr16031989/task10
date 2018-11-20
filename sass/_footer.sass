@@ -1,13 +1,16 @@
 .footer
-
   background: linear-gradient(90.42deg, rgba(0, 0, 0, 0.69) 0.16%, rgba(0, 0, 0, 0.1) 86.08%), url("../images/pic/background/footer.jpg")
   background-repeat: no-repeat
   background-size: cover
   background-position: center
-  padding: 6.5% 0 0 0
+  padding: 100px 0 0 0
+  +media(1023)
+    padding-top: 120px
+  +media(540)
+    padding-top: 48px
 
   +media(768)
-    background: linear-gradient(90.42deg, rgba(0, 0, 0, 0.69) 0.16%, rgba(0, 0, 0, 0.1) 86.08%), url("../images/pic/background/footer_tablet.jpg") 
+    background: linear-gradient(90.42deg, rgba(0, 0, 0, 0.69) 0.16%, rgba(0, 0, 0, 0.1) 86.08%), url("../images/pic/background/footer_tablet.jpg")
     background-repeat: no-repeat
     background-size: cover
     background-position: center

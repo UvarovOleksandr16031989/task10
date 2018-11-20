@@ -35,10 +35,10 @@ $('.burger').click(function() {
 //script for nev img on adaptive//
 var windowWidth = $(window).width();
 if(windowWidth < 1023){
-    $(".users__photo--vh").attr("src","../images/portfolio/user_vh-tablet.jpg");
-    $(".users__photo--ac").attr("src","../images/portfolio/user_ac-tablet.jpg");
-    $(".users__photo--rt").attr("src","../images/portfolio/user_rt-tablet.jpg");
-    $(".users__photo--ls").attr("src","../images/portfolio/user_ls-tablet.jpg");
+    $(".users__photo--vh").attr("src","images/portfolio/user_vh-tablet.jpg");
+    $(".users__photo--ac").attr("src","images/portfolio/user_ac-tablet.jpg");
+    $(".users__photo--rt").attr("src","images/portfolio/user_rt-tablet.jpg");
+    $(".users__photo--ls").attr("src","images/portfolio/user_ls-tablet.jpg");
 }
 
 

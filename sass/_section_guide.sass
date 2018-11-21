@@ -5,7 +5,7 @@
 
   &__inner-row
     position: relative
-    padding-top: 42px
+    padding-top: 40px
     @include row(row,space-between,flex-start)
     +media(1023)
       flex-direction: column
@@ -92,9 +92,7 @@
   &__about
     @include roboto(300,18)
     color: #666666
-    line-height: 1.74vw
-    +media(1440)
-      line-height: 25px
+    line-height: 25px
     +media(350)
       line-height: 17px
       font-size: 12px
@@ -117,15 +115,13 @@
 
   &__arrow-box
     box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.15)
-    width: 2.22vw
-    line-height: 2.22vw
+    width: 32px
+    line-height: 32px
     border-radius: 50px
     text-align: center
     transition: 0.5s
     transform: rotate(180deg)
-    +media(1023)
-      width: 32px
-      line-height: 32px
+
 
 
   &__arrow

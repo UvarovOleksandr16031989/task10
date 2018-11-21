@@ -9,6 +9,8 @@
     @include row(row,space-between,flex-start)
     +media(1023)
       flex-direction: column
+    +media(500)
+      padding-top: 32px
 
 
   &__headline
@@ -47,7 +49,7 @@
       flex-direction: row
       justify-content: flex-start
       align-items: flex-end
-    +media(660)
+    +media(662)
       justify-content: center
       align-items: center
       position: absolute
@@ -56,6 +58,8 @@
       transform: translateX(-50%)
       width: 100%
       border: none
+    +media(320)
+      justify-content: space-between
 
 
   &__name
@@ -73,7 +77,7 @@
         background: #000000
         content: ''
         top: 0px
-        right: -14px
+        right: -8%
     +media(630)
       font-size: 15px
 
@@ -87,6 +91,9 @@
       padding: 0 0 0 28px
     +media(630)
       font-size: 14px
+      padding: 0 0 0 16px
+    +media(320)
+      padding: 0
 
 
   &__about

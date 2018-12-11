@@ -25,10 +25,12 @@ $('#fourth,.fourth_arrow').click(function() {
 
 $('.burger').click(function() {
     $('.burger__item').toggleClass('is-active');
+    $('.burger').toggleClass('is-active');
     $('.header__nav ').toggleClass('is-hiden');
 });
  $('.header__nav').click(function () {
     $('.burger__item').removeClass('is-active');
+    $('.burger').toggleClass('is-active');
     $('.header__nav ').removeClass('is-hiden');
 });
 
